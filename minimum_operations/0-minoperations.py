@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-#least number of operations using copy all & paste
+"""
+Main file for testing
+"""
 
-def minOperations(n):
-# least number of operations resulting in n & H
+minOperations = __import__('0-minoperations').minOperations
 
-    if n <= 1:
-        return 0
+n = 4
+print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
 
-    for i in range(2, int((n/2)+1)):
-        if n % i == 0:
-            return minOperations(int(n/i)) + i
-    return n
+n = 12
+print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
